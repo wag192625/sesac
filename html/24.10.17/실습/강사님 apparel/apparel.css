@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+/* header */
+.header > nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.header > nav > ul {
+  display: flex;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.section_title {
+  text-align: center;
+  margin: 1rem;
+}
+
+.header > nav > ul > li {
+  margin: 0 10px;
+}
+.header > img {
+  width: 100%;
+}
+
+/* container */
+
+.container {
+  width: 65%;
+  /* %는 무조건 부모요소 따라감 */
+  margin: 2rem auto;
+}
+.about {
+  display: flex;
+}
+.about > img {
+  display: block;
+  /* 이미지는 inline이라 block 처리*/
+  width: 40%;
+  min-width: 240px;
+
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 15% 25%;
+}
+.about > div {
+  padding: 1rem;
+}
+.about > div > h2 {
+  text-align: center;
+  margin: 1rem;
+}
+.about > div > p {
+  line-height: 1.5rem;
+}
+
+/* .contact {
+} */
+
+.contact > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact > h2 {
+  text-align: center;
+  margin: 10px;
+}
+.contact > div > img {
+  width: 35%;
+}
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.contact_form > * {
+  margin: 3px;
+}
+.contact_form > input[type='submit'] {
+  width: 100px;
+  color: red;
+  margin: auto;
+}
+
+.more > h2 {
+  text-align: center;
+  margin: 1rem;
+}
+.more img {
+  width: 40px;
+}
+
+.more_info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+}

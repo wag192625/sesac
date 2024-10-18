@@ -1,0 +1,21 @@
+div {
+  color: red;
+}
+span {
+  color: orange;
+}
+div.text {
+  color: yellow;
+}
+#text {
+  color: green;
+}
+div > span {
+  color: blue;
+}
+.text > span {
+  color: darkblue;
+}
+.text > div > span {
+  color: violet;
+}

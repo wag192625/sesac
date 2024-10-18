@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>숙소 예약</h1>
+    </header>
+    <main>
+      <h2>신상 정보</h2>
+      <form action="">
+        <label for="username">이름 :</label>
+        <input type="text" id="username" placeholder="홍길동" /><br />
+        <label for="email">이메일 :</label>
+        <input type="email" id="email" placeholder="abc123@email.com" /><br />
+        <label for="picture">예약자 사진 :</label>
+        <input type="file" id="picture" />
+        <hr />
+        <h2>상세 정보</h2>
+        <label>선호 객실 타입</label><br />
+        <label for="cityview">도시뷰:</label>
+        <input type="checkbox" id="cityview" value="cityview" />
+        <label for="lakeview">레이크뷰:</label>
+        <input type="checkbox" id="lakeview" value="lakeview" />
+        <label for="mountainview">마운틴뷰:</label>
+        <input type="checkbox" id="mountainview" value="mountainview" />
+
+        <h2>통행자 정보</h2>
+        <label>인원수</label>
+        <input type="number" value="1" />
+
+        <h2>기타</h2>
+        <textarea name="" id=""></textarea>
+      </form>
+
+      <!-- 강사님 코드 -->
+      <h1>숙소 예약</h1>
+      <form action="">
+        <h2>신상 정보</h2>
+        <label for="name">이름 : </label>
+        <input type="text" id="name" placeholder="이름" /><br />
+        <!-- label의 for과 input의 id을 연동시키면 
+        '이름' 클릭해도 입력할 수 있음
+        name=""을 입력하면 데이터가 어딘가의 url로 넘어감-->
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email" /><br />
+        <!-- 이메일 타입이고 email 데이터를 넘길거고 email이 맞기 떄문에 -->
+        <label for="picture">예약자 사진</label>
+        <input type="file" /><br />
+        <hr />
+        <h2>상세 정보</h2>
+        <h3>선호 객실 타입</h3>
+        <label for="city">도시뷰</label>
+        <input type="checkbox" name="romm_type" value="city" id="city" />
+        <label for="lake">레이크</label>
+        <input type="checkbox" name="romm_type" value="lake" id="lake" />
+        <label for="mountain">도시뷰</label>
+        <input
+          type="checkbox"
+          name="romm_type"
+          value="mountain"
+          id="mountain"
+        />
+        <!-- name으로 키 값을 통일시키고 value로 값을 나눔-->
+        <h3>기타</h3>
+        <textarea name="" id=""></textarea>
+
+        <input type="submit" value="눌러" />
+        <button>눌러</button>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body > div {
+        display: flex;
+      }
+      .box {
+        display: flex;
+        border: 1px solid;
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        background-color: bisque;
+      }
+      .b1 {
+        justify-content: center;
+        align-content: center;
+      }
+      .b2 {
+        justify-content: center;
+      }
+      .b3 {
+        align-items: flex-end;
+      }
+      .b4 {
+        justify-content: space-between;
+        /* justify-content: space-evenly; */
+      }
+      .b5 {
+        flex-wrap: wrap;
+        width: 362px;
+        border: 1px solid;
+        box-sizing: border-box;
+      }
+
+      .b5_1 {
+        width: 500px;
+        height: 500px;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .b5_2 {
+        width: 500;
+        height: 500px;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center;
+      }
+      .b5_2 > div > div {
+        display: flex;
+      }
+
+      .b5_3 {
+        width: 500;
+        height: 500px;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .b6 > div {
+        display: flex;
+      }
+      .grow1 {
+        flex-grow: 1;
+      }
+      .b6_1 {
+        display: flex;
+        justify-content: space-between;
+      }
+      .b6_1 > div {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="box">content1</div>
+    </div>
+    <hr />
+    <div>
+      <div class="box b1">
+        <!-- <span>content2</span> -->
+        content2
+        <!-- 텍스트는 요소에 들어있어야 함 -->
+      </div>
+    </div>
+    <hr />
+    <div class="b2">
+      <div class="box"></div>
+    </div>
+    <hr />
+    <div class="b3">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <hr />
+    <div class="b4">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <hr />
+    <div class="b5">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <hr />
+    <div class="b5_1">
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <hr />
+    <div class="b5_2">
+      <div>
+        <div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="b5_3">
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+
+    <hr />
+    <div class="b6">
+      <div class="grow1">
+        <div class="box"></div>
+      </div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+    <hr />
+    <div class="b6_1">
+      <div class="box"></div>
+      <div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </div>
+  </body>
+</html>

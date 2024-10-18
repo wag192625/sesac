@@ -1,0 +1,61 @@
+.card {
+  width: 700px;
+  border: 1px solid;
+}
+
+.card_header {
+  text-align: center;
+  background-color: green;
+}
+
+.card_header > h1 {
+  margin: 0;
+  padding: 4px;
+}
+
+.card_body {
+  padding: 1.5rem;
+  /* 10px으로 안 하는 이유 = 기본 폰트가 16px(1rem)인데 
+  8 = 16의 1/2, 12 = 16의 2/3 인데
+   10은 16의 5/6이라 안이쁘다 함*/
+}
+.card_body_img > div {
+  background-color: rgb(134, 229, 127);
+  height: 70px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.card_body_img > div > div {
+  line-height: 26px;
+}
+
+.card_body_img > img {
+  width: 100%;
+  display: block;
+  /* img태그는 inline 속성이라 div랑 간격이 있는데
+  block으로 설정하면 여백이 사라짐 */
+}
+
+.card_body_content > h2 {
+  margin-bottom: 0;
+}
+
+.card_body_content > hr {
+  margin-bottom: 2px;
+}
+
+.card_body_content > p {
+  background-color: bisque;
+  padding: 1rem;
+  font-weight: 500;
+  /* 400이 기본, 700이 bold */
+  margin-bottom: 0;
+}
+
+.card_footer {
+  background-color: green;
+  height: 40px;
+}

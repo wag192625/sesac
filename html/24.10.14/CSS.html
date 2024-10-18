@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      p {
+        color: blue;
+      }
+      .red {
+        /* class 선택자는 앞에 .을 붙인다. */
+        color: red;
+      }
+      .big {
+        font-size: 5px;
+      }
+      #name {
+        /* id 선택자는 앞에 #을 붙인다. */
+        color: aquamarine;
+      }
+      div p {
+        color: blanchedalmond;
+      }
+      div > p {
+        color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p>파란색</p> -->
+    <p>p 태그</p>
+    <span class="red big"> red 클래스의 span 태그</span>
+    <div class="red">red 클래스의 div 태그</div>
+    <div>
+      <p>div 안의 p 태그</p>
+    </div>
+    <div id="name">나의 id 태그는 name이야</div>
+    <!-- id는 하나만, class는 여러개 입력해도 됨 -->
+    <div>
+      <article>
+        <p>div 안의 article 안의 p태그</p>
+      </article>
+    </div>
+  </body>
+</html>

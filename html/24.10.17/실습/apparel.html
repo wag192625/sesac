@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* * {
+        margin: 0;
+        padding: 0;
+      } */
+
+      .flex {
+        display: flex;
+      }
+      .justi_con_center {
+        justify-content: center;
+      }
+      .ali_con_center {
+        align-content: center;
+      }
+      .top_title {
+        font-weight: bold;
+        justify-content: space-between;
+        /* flex-grow: 1; */
+      }
+      header {
+        padding: 10px 0 10px 0;
+      }
+      .header_img {
+        /* border-bottom:; */
+      }
+      .header_img > img {
+        width: 100%;
+      }
+      .article1 {
+        justify-content: center;
+        display: flex;
+      }
+      .sec_img_1 {
+        width: 400px;
+      }
+      .sec_img_1 > img {
+        width: 100%;
+      }
+      .sec_text_1 {
+        width: 400px;
+        justify-items: center;
+        margin: 10px;
+      }
+      .sec_text_1 > h1 {
+        margin: 0;
+        text-align: center;
+      }
+
+      .contact_us {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact_us > div {
+        display: flex;
+      }
+      .contact_us_content {
+        justify-content: space-around;
+        width: 800px;
+      }
+      .input_box {
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        width: 200px;
+        height: 150px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+      .sec_img_2 {
+        width: 200px;
+      }
+      .sec_img_2 > img {
+        width: 100%;
+      }
+      .more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .more > div {
+        display: flex;
+        justify-content: space-around;
+        width: 700px;
+      }
+      .more_img {
+        width: 150px;
+        height: 200px;
+      }
+      .more_img > img {
+        width: 100px;
+        height: 100px;
+      }
+      footer {
+        text-align: center;
+        height: 100px;
+        border-top: 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="flex top_title">
+        <div>
+          <div>APPAREL SHOP</div>
+        </div>
+        <div class="flex">
+          <a href="">HOME</a>
+          <a href="">PRODUCTS</a>
+        </div>
+      </div>
+      <div class="header_img">
+        <img src="assets/apparel.png" alt="없음" />
+      </div>
+    </header>
+    <main>
+      <section class="article1">
+        <div class="sec_img_1">
+          <img src="assets/apparel2.jpg" alt="" />
+        </div>
+        <div class="sec_text_1">
+          <h1>About Our Company</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            necessitatibus eveniet, nisi quod voluptatum quasi deleniti sint
+            eaque eius voluptatem, doloribus ratione repellendus qui itaque
+            voluptas totam corporis perferendis nobis.
+          </p>
+        </div>
+      </section>
+      <section class="contact_us">
+        <h1>Contact Us</h1>
+        <div class="contact_us_content">
+          <form class="input_box">
+            <div>
+              Username <br />
+              <input type="text" />
+            </div>
+            <div>
+              Email <br />
+              <input type="email" />
+            </div>
+            <input class="" type="submit" />
+          </form>
+          <div class="sec_img_2">
+            <img src="assets/apparel3.jpg" alt="없음" />
+          </div>
+        </div>
+      </section>
+      <section class="more">
+        <h1>More</h1>
+        <div>
+          <div class="more_img">
+            <img src="assets/mail.png" alt="" />
+            <p>Email Addres</p>
+            <p>abc123@email.com</p>
+          </div>
+          <div class="more_img">
+            <img src="assets/telephone.png" alt="" />
+            <p>Phone Number</p>
+            <p>010-1234-5678</p>
+          </div>
+          <div class="more_img">
+            <img src="assets/circle.png" alt="" />
+            <p>Location</p>
+            <p>서울 특별시 도곡동</p>
+          </div>
+          <div class="more_img">
+            <img src="assets/clock.png" alt="" />
+            <p>Working Hours</p>
+            <p>9am ~ 6pm</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright</p>
+    </footer>
+  </body>
+</html>

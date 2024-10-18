@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메뉴(플렉스박스 이용)</title>
+    <style>
+      body {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 10%;
+      }
+      h1 {
+        color: brown;
+        font-weight: bold;
+      }
+      h2 {
+        padding-bottom: 40px;
+        border-bottom: 1px solid black;
+        margin: 0px;
+      }
+      .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      ul,
+      li {
+        list-style-type: none;
+      }
+      .menu > div {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>MENU</h1>
+    </header>
+    <main>
+      <div class="menu">
+        <h2>COFFEE</h2>
+        <div>
+          <div>아메리카노</div>
+          <div>5.0 / 5.0</div>
+        </div>
+        <div>
+          <div>카페라떼</div>
+          <div>6.0 / 6.5</div>
+        </div>
+        <div>
+          <div>바닐라라떼</div>
+          <div>6.0 / 6.5</div>
+        </div>
+        <div>
+          <div>카라멜마끼아또</div>
+          <div>6.5 / 7.0</div>
+        </div>
+      </div>
+      <div class="menu">
+        <h2>ADE</h2>
+        <div>
+          <div>레몬에이드</div>
+          <div>6.0</div>
+        </div>
+        <div>
+          <div>자몽에이드</div>
+          <div>6.0</div>
+        </div>
+        <div>
+          <div>유자에이드</div>
+          <div>6.0</div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
