@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 10%;
+        background-color: aquamarine;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        display: flex;
+        margin: 30px auto;
+      }
+      header > h1 {
+        text-align: center;
+        margin: 0 auto;
+        /* width: ; */
+      }
+      section {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        width: 100%;
+      }
+      .search {
+        display: flex;
+      }
+      .search > input {
+        display: flex;
+      }
+      .search > input[type='text'] {
+        margin: 0 10px;
+        width: 100%;
+      }
+      .check_tab {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid;
+      }
+      /* .check_tab > * {
+        display: flex;
+      } */
+      .check_tab > h2 {
+        text-align: left;
+        width: 100%;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
+    <main>
+      <section>
+        <form action="" class="search">
+          <input type="text" name="search" id="search" />
+          <input type="submit" name="search" id="search" />
+        </form>
+      </section>
+      <section>
+        <form action="" class="check_tab">
+          <h2>예습하기</h2>
+          <input type="checkbox" />
+        </form>
+      </section>
+      <section>
+        <form action="" class="check_tab">
+          <h2>강의 듣기</h2>
+          <input type="checkbox" />
+        </form>
+      </section>
+      <section>
+        <form action="" class="check_tab">
+          <h2>복습 하기</h2>
+          <input type="checkbox" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
