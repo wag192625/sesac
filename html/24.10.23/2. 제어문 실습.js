@@ -1,3 +1,5 @@
+// const { result } = require('lodash');
+
 console.log('다음 문제를 푸시오');
 const nums = [
   [1, 2, 3],
@@ -131,15 +133,26 @@ console.log('ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ�
 n = nums.length;
 m = nums[0].length;
 totalList = [];
-ijsum = 0;
 for (let j = 0; j < m; j++) {
+  ijsum = 0;
   for (let i = 0; i < n; i++) {
     ijsum += nums[i][j];
   }
   totalList.push(ijsum);
-  ijsum = 0;
 }
 console.log('새로운 답', totalList);
+
+// 강사님 풀이
+
+result = [];
+for (let j = 0; j < m; j++) {
+  sum = 0;
+  for (let i = 0; i < n; i++) {
+    sum += nums[i][j];
+  }
+  result.push(sum);
+}
+// console.log(result)
 
 console.log('10. 구구단이 들어있는 2차원 배열을 만드시오.');
 guguCulumn = 4; // 열의 갯수
@@ -149,10 +162,12 @@ guguCulumnList = [];
 for (let i = 1; i <= guguLow; i++) {
   for (let j = 1; j <= guguCulumn; j++) {
     guguLowList.push(i * j);
-    if (guguLowList.length === guguCulumn) {
-      guguCulumnList.push(guguLowList);
-      guguLowList = [];
-    }
+    // if (guguLowList.length === guguCulumn) {
+    //   guguCulumnList.push(guguLowList);
+    //   guguLowList = [];
+    // }
   }
+  guguCulumnList.push(guguLowList);
+  guguLowList = [];
 }
 console.log(guguCulumnList);
