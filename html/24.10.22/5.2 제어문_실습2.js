@@ -422,6 +422,19 @@ people = [
 console.log('마지막 문제');
 people2 = {};
 
+for (let i in people) {
+  people2[people[i].name] = people[i];
+}
+console.log(people2);
+
+//강사님이 푼 거
+const objectPeople = {};
+
+for (const person of people) {
+  const name = person.name;
+  objectPeople[name] = person;
+}
+
 // for (key of people) {
 //   // console.log(key);
 //   // people2.push(key.name);
@@ -434,9 +447,3 @@ people2 = {};
 //   }
 //   // people2.push((key.name = new Set([key])));
 // }
-
-for (let i in people) {
-  people2[people[i].name] = people[i];
-}
-
-console.log(people2);

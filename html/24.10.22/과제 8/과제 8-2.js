@@ -56,6 +56,8 @@ for (key in todos) {
     'isCompleted: ',
     todos[key].isCompleted
   );
+
+  
   // console.log(key);
   // console.log(todos[key].content, todos[key].isCompleted);
   // console.log(key);
