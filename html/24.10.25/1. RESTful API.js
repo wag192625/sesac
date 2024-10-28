@@ -50,9 +50,9 @@ async function getPosts() {
   // console.log(title);
 }
 
-console.log('--- POST ------------------------');
-
 // getPosts();
+
+console.log('--- POST ------------------------');
 
 // post는 생성하는 것
 
