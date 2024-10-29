@@ -7,12 +7,17 @@ async function getPost() {
     // const baseURL = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=QCm74%2BCmnGEJDOzL%2BwIQlr5LUEwzfwgYfGGBPpAaEE2fkCqaJ7PKQD9dbuf0S5jOQxE5BRmyZmkO6cMDg%2BO72A%3D%3D&returnType=json&numOfRows=100&sidoName=%EC%A0%84%EA%B5%AD&ver=1.0`;
     // const path = '/items';
     let URL = `${baseURL}`;
-    const response = await fetch(URL);
-    const data = await response.json();
-    console.log(data.response.body.items);
+    const res = await fetch(URL);
+    let data = await res.json();
 
-    // const mise = data.body;
-    // console.log(mise);
+    data = data.response.body.items;
+    const objectData = {};
+    for (datum of data) {
+      const stationName = datum.stationName;
+      objectData[stationName] = datum;
+    }
+    console.log(objectData['광진구']);
+    console.log(objectData['관악구']);
   } catch (error) {
     console.error('Error:', error);
   }

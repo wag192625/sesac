@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .font {
+        font-size: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="" alt="강아지 사진" />
+    <!-- 
+      다음 api를 참고하여 img태그에 강아지 사진을 넣어주세요.
+      https://dog.ceo/dog-api/ 
+    -->
+    <script>
+      async function photo() {
+        const URL = 'https://dog.ceo/api/breeds/image/random';
+        const res = await fetch(URL);
+        let data = await res.json();
+        // getPhoto = data.message;
+        // console.log(getPhoto);
+        const imgUrl = data.message;
+
+        const imgChange = document.querySelector('img');
+        // imgChange.src = imgUrl;
+        imgChange.setAttribute('src', imgUrl);
+      }
+
+      photo();
+
+      setInterval(photo, 1000);
+
+      // promise 객체는 무조건 promise를 반환해서
+      // 반환값이 object Promise인 것
+      // 그래서 아예 값들을 함수 내에 넣음
+    </script>
+  </body>
+</html>
