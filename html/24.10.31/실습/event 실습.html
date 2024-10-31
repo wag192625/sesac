@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- html 코드도 자유롭게 수정하세요! -->
+
+    <!-- button을 클릭하면 원본 텍스트가 "텍스트가 바뀜"으로 변하도록 구현하시오. -->
+    <div class="container">
+      <div id="changeText">바뀔 예정인 텍스트</div>
+      <button>클릭</button>
+    </div>
+    <script>
+      const button = document.querySelector('button');
+      button.addEventListener('click', () => {
+        const changeText = document.querySelector('#changeText');
+        changeText.textContent = '텍스트가 바뀜';
+      });
+    </script>
+
+    <!-- 무언가를 클릭하면 원본 텍스트가 빨간색으로, 다른 무언가를 클릭하면 원본 텍스트가 파란색으로 변하도록 구현하시오. -->
+    <div class="container">
+      <div id="changeColor">이 텍스트의 색상을 바꾸세요!</div>
+      <button id="clickBtn1">클릭1</button>
+      <button id="clickBtn2">클릭2</button>
+    </div>
+    <script>
+      const changeColor = document.querySelector('#changeColor');
+      const clickBtn1 = document.querySelector('#clickBtn1');
+      const clickBtn2 = document.querySelector('#clickBtn2');
+
+      clickBtn1.addEventListener('click', () => {
+        changeColor.style.backgroundColor = 'red';
+      });
+      clickBtn2.addEventListener('click', () => {
+        changeColor.style.backgroundColor = 'blue';
+      });
+    </script>
+
+    <!-- button을 클릭하면 텍스트가 보였다 안보였다 바뀌도록 구현하시오. -->
+    <!-- display : hidden 속성 및 class를 활용합니다. -->
+    <div class="container">
+      <div id="hiddenText">보였다 안보였다</div>
+      <button id="hiddenTextBtn">클릭</button>
+    </div>
+    <script>
+      const hiddenText = document.querySelector('#hiddenText');
+      const hiddenTextBtn = document.querySelector('#hiddenTextBtn');
+      hiddenTextBtn.addEventListener('click', () => {
+        // if ((hiddenText.style.display = 'block')) {
+        //   hiddenText.style.display = 'none';
+        // } else {
+        //   hiddenText.style.display = 'block';
+        // }
+        hiddenText.classList.toggle('hidden');
+      });
+    </script>
+
+    <!-- 입력을 하면 입력한 text가 아래의 div태그에 표현되도록 바꾸시오. -->
+    <!-- hint : input의 입력값은 value로 표현된다. -->
+    <div class="container">
+      <input type="text" id="inputText" />
+      <div id="changeTextDiv"></div>
+    </div>
+    <script>
+      const inputText = document.querySelector('#inputText');
+      const changeTextDiv = document.querySelector('#changeTextDiv');
+      inputText.addEventListener('input', (e) => {
+        const value = (target = e.target.value);
+        changeTextDiv.textContent = value;
+      });
+    </script>
+
+    <!-- 마우스를 올리면 배경색이 빨간색으로 변하고, 내리면 다시 검정색으로 변하는 기능을 구현하시오. -->
+    <div class="container">
+      <div class="box" id="changeBox"></div>
+    </div>
+    <script>
+      const changeBox = document.querySelector('#changeBox');
+      changeBox.addEventListener('mouseover', () => {
+        changeBox.style.backgroundColor = 'red';
+      });
+      changeBox.addEventListener('mouseout', () => {
+        changeBox.style.backgroundColor = 'black';
+      });
+    </script>
+
+    <!-- 버튼을 누르면 숫자가 1 증가하는 기능을 구현하시오 -->
+    <div class="container">
+      <div id="changeNumDiv">0</div>
+      <button id="changeNumDivBtn">버튼</button>
+      <button id="resetBtn">리셋</button>
+    </div>
+    <script>
+      changeNumDiv = document.querySelector('#changeNumDiv');
+      changeNumDivBtn = document.querySelector('#changeNumDivBtn');
+      resetBtn = document.querySelector('#resetBtn');
+
+      changeNumDivBtn.addEventListener('click', () => {
+        // 변수로 바꾸는게
+        let num = parseInt(changeNumDiv.textContent);
+        num += 1;
+        changeNumDiv.textContent = num;
+      });
+      resetBtn.addEventListener('click', () => {
+        changeNumDiv.textContent = parseInt(0);
+      });
+    </script>
+
+    <!-- 색상을 입력하면 텍스트의 색이 변하는 기능을 구현하시오. -->
+    <div class="container" id="prac_1">
+      <h1>what color am I</h1>
+      <input type="text" />
+    </div>
+    <script>
+      const changeH1 = document.querySelector('#prac_1 > h1');
+      const inputH1 = document.querySelector('#prac_1 > input');
+      inputH1.addEventListener('input', (e) => {
+        const changeColor = (target = e.target.value);
+        console.log(changeColor);
+        changeH1.style.color = changeColor;
+      });
+    </script>
+  </body>
+</html>

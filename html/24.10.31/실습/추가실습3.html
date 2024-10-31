@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        /* flex-direction: column; */
+      }
+      ul,
+      li {
+        list-style-type: none;
+        border: 1px solid black;
+        text-align: center;
+        align-content: center;
+        width: 100px;
+        height: 50px;
+      }
+      div {
+        display: block;
+      }
+    </style>
+  </head>
+  <body id="container">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      // const new
+      studentList = [
+        '가경식',
+        '강경훈',
+        '김동훈',
+        '김상호',
+        '노영재',
+        '박재훈',
+        '박종빈',
+        '박하은',
+        '서승덕',
+        '오예진',
+        '원성준',
+        '육슬찬',
+        '윤대정',
+        '이상호',
+        '이재현',
+        '이태영',
+        '임수빈',
+        '임유진',
+        '정명훈',
+        '정승연',
+        '정여원',
+        '최원호',
+        '차윤선',
+      ];
+      const container = document.querySelector('#container');
+      stdLeng = studentList.length + 5;
+      studentList = _.shuffle(studentList);
+      for (let i = 0; i < stdLeng / 7; i++) {
+        const newDiv = document.createElement('div');
+        container.append(newDiv);
+        const newOl = document.createElement('ol');
+        newDiv.append(newOl);
+        container.append(newOl);
+        for (j = 0; j < 7; j++) {
+          if (i === 0 && j === 0) {
+            const newLi = document.createElement('li');
+            newLi.textContent = null;
+            newOl.append(newLi);
+            continue;
+          }
+          let students = studentList.shift();
+          const newLi = document.createElement('li');
+          newLi.textContent = students;
+          newOl.append(newLi);
+        }
+      }
+    </script>
+  </body>
+</html>

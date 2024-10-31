@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 300px;
+      }
+      .box {
+        min-width: 100px;
+        min-height: 100px;
+        border: 8px solid gold;
+        background-color: black;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <div class="box" id="randBox"></div>
+    <script>
+      // var _ = require('lodash');
+
+      const randomBox = document.querySelector('#randBox');
+      randomBox.addEventListener('click', () => {
+        rgb = [];
+        for (let i = 0; i <= 2; i++) {
+          let randomColor = _.random(0, 255);
+          rgb.push(randomColor);
+        }
+        randomBox.style.backgroundColor = `rgb(${rgb})`;
+      });
+      // console.log(rgb);
+    </script>
+  </body>
+</html>
