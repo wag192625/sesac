@@ -20,9 +20,7 @@ console.log('--- GET ------------------------');
 
 // 특정 데이터 get으로 가져오기
 async function getPostById(postId) {
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${postId}`
-  );
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
   const data = await response.json(); // json으로 된 데이터를 응답 받음
   console.log(data);
   // const json = response.json();
@@ -103,21 +101,18 @@ console.log('---------------------------');
 
 async function updatePost() {
   try {
-    const response = await fetch(
-      'https://jsonplaceholder.typicode.com/posts/1',
-      {
-        method: 'PUT',
-        body: JSON.stringify({
-          id: 1,
-          title: 'foo',
-          body: 'bar',
-          userId: 1,
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      }
-    );
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1', {
+      method: 'PUT',
+      body: JSON.stringify({
+        id: 1,
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    });
     const data = await response.json();
     console.log(data);
   } catch (error) {
