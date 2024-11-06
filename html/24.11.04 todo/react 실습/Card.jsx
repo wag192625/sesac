@@ -36,3 +36,16 @@ export default function Card() {
     </>
   );
 }
+
+// export default function Card1({title='기본값', content, style}) {
+// // export default function Card1() {
+// //   const {title, content, style} = props
+//   // const {width, height} = style
+//   return (
+//     // <div style={{width : width, height:height}}>
+//     <div style={{...style, backgroundColor: 'red'}}>
+//       <h3>{title}</h3>
+//       <p>{content}</p>
+//     </div>
+//   )
+// }
