@@ -3,7 +3,6 @@ import { replace } from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
-import postApi from '../api/postApi';
 
 export default function PostDetail() {
   const navigate = useNavigate();
@@ -14,15 +13,14 @@ export default function PostDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // const url = 'http://localhost:3000/posts';
     async function fetchPostList() {
       try {
-        // const response = await axios(`${url}/${postId}`);
-        // const postList = response.data;
-        // setPost(postList.find((el) => el.id === parseInt(postId)));
+        const url = 'http://localhost:3000/posts';
+        const response = await axios(`${url}/${postId}`);
 
-        const data = await postApi.getPostById(postId);
-        setPost(data);
+        const postList = response.data;
+        // setPost(postList.find((el) => el.id === parseInt(postId)));
+        setPost(postList);
       } catch (err) {
         // navigate('/posts');
         navigate('/not-found', { replace: true });

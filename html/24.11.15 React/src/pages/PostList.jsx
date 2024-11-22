@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import postApi from '../api/postApi';
 
 export default function PostList() {
   const navigate = useNavigate();
@@ -14,12 +13,11 @@ export default function PostList() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        // const url = 'http://localhost:3000/posts';
-        // const response = await axios.get(url);
+        const url = 'http://localhost:3000/posts';
+        const response = await axios.get(url);
         // const response = await axios({ url: url });
-        // const data = response.data;
-        const data = await postApi.getPost();
 
+        const data = response.data;
         setLoading(false);
         setPost(data);
       } catch (err) {

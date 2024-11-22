@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addPost } from '../store/slices/postsSlice';
 import { useNavigate } from 'react-router-dom';
-import postApi from '../api/postApi';
+import axios from 'axios';
 
 export default function PostCreate() {
   // const posts = useSelector((state) => state.posts);
@@ -23,12 +23,9 @@ export default function PostCreate() {
   function handleSubmit(e) {
     e.preventDefault();
     async function createPost() {
-      // const url = 'http://localhost:3000/posts';
-      // const response = await axios.post(url, formData);
-      // const data = response.data;
-
-      const data = await postApi.creatPost();
-
+      const url = 'http://localhost:3000/posts';
+      const response = await axios.post(url, formData);
+      const data = response.data;
       const id = data.id;
       navigete(`/posts/${id}`);
     }
