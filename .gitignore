@@ -1,3 +1,4 @@
 html/node_modules/
 html/package-lock.json
 html/package.json
+*.drawio.bkp
