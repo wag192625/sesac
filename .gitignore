@@ -2,3 +2,12 @@ html/node_modules/
 html/package-lock.json
 html/package.json
 *.drawio.bkp
+
+# 인텔리제이 이후
+gradle-wrapper.jar
+*.jar
+*.properties
+*.xml
+*.kts
+*.bat
+gradlew
